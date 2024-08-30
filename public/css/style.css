@@ -1,0 +1,111 @@
+body{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+
+/* Navbar */
+
+.navbar{
+    font-size: 1.5rem;
+    background-color: white;
+}
+.fa-compass
+{
+    font-size: 2.5rem;
+    color: #fe424d;
+}
+/* .nav-link{
+    color: #2222 !important;
+} */
+
+.fa-info-links a{
+    text-decoration: none;
+    color: #ff040422;
+    font-size: 1.2rem;
+    /* font-weight: 500; */
+}
+.fa-info-links a:hover{
+    text-decoration: underline;
+
+}
+.fa-info-links {
+   width: 100%;
+}
+.fa-info-social{
+    width: 100%;
+    font-size: 1.3rem;
+}
+.fa-info-social i {
+    margin-right: 1rem; 
+    font-size: 1.3rem;
+}
+.fa-info{
+     text-align: center;
+    display: flex;
+    height: 7rem;
+    background-color: lightslategray;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly ;
+}
+.fa-info-brand{
+    width: 100%;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Card */
+
+.listing-card{
+    border-radius: none !important;
+    margin-bottom: 2rem ;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+
+}
+.card-body{
+    padding: 0 !important;
+
+}
+.card-text{
+
+}
+.listing-link{
+    text-decoration: none;
+
+}
+  /* Card Effect */
+  .card-img-overlay{
+    opacity: 0;
+  }
+  .card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+  }
+
+/* Show card */
+  .show-img{
+    height: 35vh;
+  }
+  .btn{
+    display: flex;
+
+  }
+  .edit-btn{
+    background-color: rgb(9, 238, 55);
+  }
+.edit-btn-d{
+    background-color: #fe424d;
+}
+.show-card{
+    padding-right: 0;
+    padding-left: 0;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit </title>
+</head>
+<body>
+    <h2>Edit This Listing</h2>
+    <form method="POST" action="/listings">
+        <input name="listing[title]" value ="<%= listing.title %>" type="text"><br><br>
+   
+        <textarea name="listing[description]" id="" value="<%= listing.description %>" type="text"></textarea><br><br>
+   
+        <input name="listing[image]"  value="<%= listing.image %>" >
+   
+        <input name="listing[price]"  value="<%= listing.price %>" type="number"><br><br>
+   
+        <input name="listing[location]"  value="<%= listing.location %>" type="text"><br><br>
+   
+        <input name="listing[country]"  value="<%= listing.country %>" type="text"><br><br>
+   
+        <button> Edit </button>
+     </form>
+    
+</body>
+</html>
+
+//app.put("/listings/:id",(req,res)=>{
+    //     let { id } = req.params;
+    //     Listing.findByIdAndUpdate(id, { ...req.body.listing });
+    //     res.redirect(`/listings/${id}`);
+    //   })
+
+
+
+
+
+
+
+
+
+
+    <div class="form-group" class="md-3">
+
+    </div>
+
+
+
+
+new Listing
+
+    <input name="listing[title]" placeholder=" enter title" type="text"><br><br>
+
+    <textarea name="listing[description]" id="" placeholder="description" type="text"></textarea><br><br>
+
+    <input name="listing[image]" placeholder="enter image" >
+
+    <input name="listing[price]" placeholder=" enter price" type="number"><br><br>
+
+    <input name="listing[location]" placeholder=" enter locarion" type="text"><br><br>
+
+    <input name="listing[country]" placeholder=" enter country" type="text"><br><br>
+
+    <button> Add </button>
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    &#8377;<%= listing.price.toLocaleString("en-IN") %>
+
+
+
+
+
+
+    <div class="row offset-3">
+        <p><b>All Reviews</b></p>
+      
+          <% for(reviews of listing.reviews) { %>
+      
+          <div class="card col-3 mb-3  ">
+            <div class="card-body">
+              <h5 class="card-title">raushan</h5>
+              <p class="card-text"> <%= reviews.comment  %></p>
+              <p class="card-text"> <%= reviews.rating  %> Star</p>
+          </div>
+          <% } %>
+      
+      
+      </div><% if(success && success.lenght) {%>
+        <div class="alert alert-success col-6 offset-3" role="alert">
+          <%= success %>
+          <button
+          class="btn-colse"
+          type="button"
+          data-bs-dismiss="alert"
+          aria-lable="Colse"
+          ></button>
+          </div>
+    
+        <%  }%>
+        
+        <% if(success && success.lenght) {%>
+            <div class="alert alert-success col-6 offset-3" role="alert">
+              <%= success %>
+              <button
+              class="btn-colse"
+              type="button"
+              data-bs-dismiss="alert"
+              aria-lable="Colse"
+              ></button>
+              </div>
+        
+            <%  }%>
+
+
+            <% if(currUser && currUser._id.equals(listing.owner._id)) {%>
+
+              <% } %>
+
+              <% if(currUser) {%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <fieldset class="starability-slot">
+                  <label for="rating" class="form-control">Rating</label>
+                  
+                  <input type="radio" 
+                  id="no-rate"
+                   class="input-no-rate"
+                    name="review[rating]"
+                     value="0"
+                      checked 
+                      aria-label="No rating."
+                       />
+                       <fieldset class="starability-slot">
+                  <input type="radio" id="first-rate1" name="review[rating]" value="1" />
+                  <label for="first-rate1" title="Terrible">1 star</label>
+                  <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+                  <label for="first-rate2" title="Not good">2 stars</label>
+                  <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+                  <label for="first-rate3" title="Average">3 stars</label>
+                  <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+                  <label for="first-rate4" title="Very good">4 stars</label>
+                  <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+                  <label for="first-rate5" title="Amazing">5 stars</label>
+                </fieldset>
+              </div>
+
+
+
+              <div class="form-group">
+                <label for="rating">Rating</label>
+                <input type="range" min="1" max="5" name="review[rating]" class="form-control" id="rating" required>
+                <div class="invalid-feedback">Please provide a rating between 1 and 5.</div>
+              </div>
+
+
+
+              <input name="listing[image]"  type="file" class="form-control" required />
+
+
+
+
+
+
+
+              /// login and log out and sing up 
+
+              
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link active mt-3"  href="/listings/new"> Airbin your home</a>
+            <% if(!currUser) {%>
+            <a class="nav-link active" aria-current="page" href="/singUp">   <button type="submit" class="btn btn-primary mt-3">SingUp</button></a>
+            <a class="nav-link active" aria-current="page" href="/login">  <button type="submit" class="btn btn-primary mt-3">Login</button></a>
+            <% } %>
+            <% if(currUser) {%>
+            <a class="nav-link active" aria-current="page" href="/logout">   <button type="submit" class="btn btn-danger mt-3" <span><i class="fa-solid fa-right-from-bracket mt-1"  ></i></span>Logout</button></a>
+            <% } %>
+          </div>
+
+
+
+          <div class="navbar-nav ms-auto ">
+            <ul> 
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle user" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                </a>
+                <% if(!currUser) {%>
+                <ul class="dropdown-menu">
+                  <a class="nav-link active" aria-current="page" href="/singUp">   <button type="submit" class="btn btn-primary mt-3">SingUp</button></a>
+                  <a class="nav-link active" aria-current="page" href="/login">  <button type="submit" class="btn btn-primary mt-3">Login</button></a>
+                  <% } %>
+                  
+                  <li><hr class="dropdown-divider"></li>
+                  <% if(currUser) {%>
+                  
+                    <a class="nav-link active" aria-current="page" href="/logout">   <button type="submit" class="btn btn-danger mt-3" <span><i class="fa-solid fa-right-from-bracket mt-1"  ></i></span>Logout</button></a>
+                    <% } %>
+                  </ul>
+              </li></ul>
+          
+          </div>
+          
