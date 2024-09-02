@@ -1,17 +1,122 @@
+
+<style>
+    /* Basic Styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+  
+    .footer {
+        background-color: #f8f8f8;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .footer-column {
+        flex: 1;
+        min-width: 200px;
+        margin: 10px;
+    }
+    .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .footer-column ul li {
+        margin: 5px 0;
+    }
+    .footer-column ul li a {
+        text-decoration: none;
+        color: black;
+    }
+    .footer-column ul li a:hover{
+        text-decoration: underline;
+    }
+    
+    
+    
+    .footer-bottom {
+        text-align: center;
+        padding: 10px;
+        background-color: #e6e6e6;
+    }
+    .footer-bottom ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-bottom ul li {
+        margin: 0 10px;
+    }
+    .footer-bottom ul li a {
+        text-decoration: none;
+        color: rgb(62, 62, 62);
+    }
+    .footer-bottom p a{
+        text-decoration: none;
+        color: rgb(62, 62, 62);
+    }
+    .footer-bottom p a:hover{
+        text-decoration: underline;
+        
+    }
+    .footer-bottom .social-icons a {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+</style>
 <footer>
-    <div class="fa-info">
-        <div class="fa-info-social">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-whatsapp"></i>
+    
+    
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Centre</a></li>
+                <li><a href="#">AirCover</a></li>
+                <li><a href="#">Anti-discrimination</a></li>
+                <li><a href="#">Disability support</a></li>
+                <li><a href="#">Cancellation options</a></li>
+                <li><a href="#">Report neighbourhood concern</a></li>
+            </ul>
         </div>
-        <div class="fa-info-brand">&copy; Wanderlust Private Ltd</div>
-        <div class="fa-info-links">
-            <a href="Privacy">Privacy</a>
-            <a href="Terms">Terms</a>
-            <a> </a>
-            <a href="Stiemp">Sitemap</a>
+        <div class="footer-column">
+            <h3>Hosting</h3>
+            <ul>
+                <li><a href="#">Smart House your home</a></li>
+                <li><a href="#">AirCover for Hosts</a></li>
+                <li><a href="#">Hosting resources</a></li>
+                <li><a href="#">Community forum</a></li>
+                <li><a href="#">Hosting responsibly</a></li>
+                <li><a href="#">Join a free Hosting class</a></li>
+            </ul>
         </div>
+        <div class="footer-column">
+            <h3> Smart House</h3>
+            <ul>
+                <li><a href="#">Newsroom</a></li>
+                <li><a href="#">New features</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Investors</a></li>
+                
+            </ul>
+        </div>
+    </footer>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2024 Smart House, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a> · <a href="#">Company details</a></p>
+        <ul>
+            <li><a href="#">English (IN)</a></li>
+            <li><a href="#">₹ INR</a></li>
+            <li class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
     </div>
+    
 </footer>
