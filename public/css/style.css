@@ -266,3 +266,8 @@ body{
         padding: 10px;
     }
 }
+.booking-widget{
+    position: absolute;
+    margin-top: 13rem;
+right: 5rem;
+}

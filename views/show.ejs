@@ -27,37 +27,7 @@
   
 
 
-    <div class="booking-widget">
-        <h3><p class="card-text"> &#8377;<%= listing.price.toLocaleString("en-IN") %> nights</p> </h3>
-        <div class="date-picker">
-            <div class="check-in">
-              <label for="check-in-date">CHECK-IN</label>
-<input type="text" id="check-in-date" placeholder="MM/DD/YYYY">
-
-            </div>
-            <div class="checkout">
-              <label for="checkout-date">CHECKOUT</label>
-              <input type="text" id="checkout-date" placeholder="MM/DD/YYYY">
-              
-            </div>
-        </div>
-     
-          <div class="card col-10 ms-3 mb-3  offset-1">
-            <label for="guests">GUESTS</label>
-            <div class="card-body">
-           
-            <p class="card-text"> &#8377;<%= listing.price.toLocaleString("en-IN") %></p>
-            </div>
-           
-          
-        </div>
-        <div class="service-animal">
-          <a href="#">Bringing a service animal?</a>
-      </div>
-        <button class="check-availability">Check availability</button>
-    </div>
-</div>
-
+  
 
 
 
@@ -71,6 +41,44 @@
 </form>
  </div>
  <% } %>
+
+
+ <div class="booking-widget">
+  <h3><p class="card-text"> &#8377;<%= listing.price.toLocaleString("en-IN") %> nights</p> </h3>
+  <div class="date-picker">
+      <div class="check-in">
+        <label for="check-in-date">CHECK-IN</label>
+<input type="text" id="check-in-date" placeholder="MM/DD/YYYY">
+
+      </div>
+      <div class="checkout">
+        <label for="checkout-date">CHECKOUT</label>
+        <input type="text" id="checkout-date" placeholder="MM/DD/YYYY">
+        
+      </div>
+  </div>
+
+    <div class="card col-10 ms-3 mb-3  offset-1">
+      <label for="guests">GUESTS</label>
+      <div class="card-body">
+     
+      <p class="card-text"> &#8377;<%= listing.price.toLocaleString("en-IN") %></p>
+      </div>
+     
+    
+  </div>
+  <div class="service-animal">
+    <a href="#">Bringing a service animal?</a>
+</div>
+  <button class="check-availability">Check availability</button>
+</div>
+</div>
+
+
+
+
+
+
 
  <% if(currUser && currUser._id.equals(listing.owner._id)) {%>
 
